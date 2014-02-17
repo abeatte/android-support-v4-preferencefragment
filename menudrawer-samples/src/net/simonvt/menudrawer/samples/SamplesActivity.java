@@ -35,8 +35,8 @@ public class SamplesActivity extends ListActivity {
                 ViewPagerSample.class);
         mAdapter.addSample("Layout xml", "The drawer and its menu and content is defined in XML", LayoutSample.class);
         mAdapter.addSample("Fragments", "Sample that uses fragments as the content", FragmentSample.class);
-        mAdapter.addSample("ActionBarSherlock sample", "Showcases the drawer used with ActionBarSherlock.",
-                ActionBarSherlockSample.class);
+        mAdapter.addSample("AppCompat sample", "Showcases the drawer used with AppCompat.",
+                AppCompatSample.class);
 
         mAdapter.addHeader("Static drawer");
         mAdapter.addSample("Static drawer", "The drawer is always visible", StaticDrawerSample.class);

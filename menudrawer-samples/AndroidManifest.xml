@@ -47,8 +47,8 @@
         <activity android:name="net.simonvt.menudrawer.samples.StaticDrawerSample" />
         <activity android:name="net.simonvt.menudrawer.samples.FragmentSample" />
         <activity
-            android:name="net.simonvt.menudrawer.samples.ActionBarSherlockSample"
-            android:theme="@style/SampleTheme.Sherlock" />
+            android:name="net.simonvt.menudrawer.samples.AppCompatSample"
+            android:theme="@style/SampleTheme.AppCompat" />
         <activity android:name="net.simonvt.menudrawer.samples.LeftOverlaySample" />
         <activity
             android:name="net.simonvt.menudrawer.samples.TopOverlaySample"

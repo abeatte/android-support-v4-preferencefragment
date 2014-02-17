@@ -1,7 +1,5 @@
 package net.simonvt.menudrawer;
 
-import net.simonvt.menudrawer.compat.ActionBarHelper;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -24,6 +22,8 @@ import android.view.ViewParent;
 import android.view.ViewTreeObserver;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Interpolator;
+
+import net.simonvt.menudrawer.compat.ActionBarHelper;
 
 public abstract class MenuDrawer extends ViewGroup {
 
@@ -509,7 +509,10 @@ public abstract class MenuDrawer extends ViewGroup {
          * E.g. if using with a ListActivity, Activity#setContentView is overridden and dispatched to
          * MenuDrawer#setContentView, which then again would call Activity#setContentView.
          */
-        ViewGroup content = (ViewGroup) activity.findViewById(android.R.id.content);
+        final int legacyContentId =
+                activity.getResources().getIdentifier("action_bar_activity_content", "id", activity.getPackageName());
+        ViewGroup content = (ViewGroup) activity.findViewById(legacyContentId);
+        content = content == null ? (ViewGroup) activity.findViewById(android.R.id.content) : content;
         content.removeAllViews();
         content.addView(menuDrawer, LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
     }
