@@ -13,7 +13,7 @@ android {
     }
 
     compileSdkVersion 17 //parent.ext.compileSdkVersion
-    buildToolsVersion "17.0.0" //parent.ext.buildToolsVersion
+    buildToolsVersion "19.0.1" //parent.ext.buildToolsVersion
 //
 //    defaultConfig {
 //        minSdkVersion parent.ext.minSdkVersion
