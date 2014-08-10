@@ -12,6 +12,10 @@ android {
         }
     }
 
+    lintOptions {
+        abortOnError false
+    }
+
     compileSdkVersion 17 //parent.ext.compileSdkVersion
     buildToolsVersion '19.1.0' //parent.ext.buildToolsVersion
 //
